@@ -1,14 +1,13 @@
-#include <iostream>
-
-int main()
-{
-    std::string p = "HI THIS IS BRAIN";
-    std::string *stringPTR = &p;
-    std::string &stringREF = p;
-    std::cout << "The memory address of the string variable: " << &p << std::endl;
-    std::cout << "The memory address held by stringPTR: " << stringPTR << std::endl;
-    std::cout << "The memory address held by stringREF: " << &stringREF << std::endl;
-    std::cout << "The value of the string variable: " << p << std::endl;
-    std::cout << "The value pointed to by stringPTR: " << *stringPTR << std::endl;
-    std::cout << "The value pointed to by stringREF: " << stringREF << std::endl;
+#include "Fixed.hpp"
+ int main( void ) {
+ Fixed a;
+ Fixed const b( Fixed( 5.05f ) * Fixed( 2 ) );
+ std::cout << a << std::endl;
+ std::cout << ++a << std::endl;
+ std::cout << a << std::endl;
+ std::cout << a++ << std::endl;
+ std::cout << a << std::endl;
+ std::cout << b << std::endl;
+ std::cout << Fixed::max( a, b ) << std::endl;
+ return 0;
 }
